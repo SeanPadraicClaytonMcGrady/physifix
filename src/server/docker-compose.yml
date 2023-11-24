@@ -8,3 +8,16 @@ services:
       POSTGRES_DB: physifix_db
       POSTGRES_USER: postgresql
       POSTGRES_PASSWORD: postgresql
+
+  # web:
+  #   build: .
+  #   command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+  #   volumes:
+  #     - .:/app
+  #   depends_on:
+  #     - db
+  #   ports:
+  #     - "8000:8000"
+  #   environment:
+  #     - DATABASE_URL=postgresql://postgresql:postgresql@db:5432/physifix_db
+  #   restart: on-failure

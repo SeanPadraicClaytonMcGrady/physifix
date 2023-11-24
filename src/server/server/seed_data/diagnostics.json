@@ -1,0 +1,12 @@
+[
+  {
+    "model": "server.diagnostic",
+    "pk": 1,
+    "fields": {
+      "name": "Load Intolerance",
+      "video": "https://youtu.be/PV4pUmkbXzc?si=HkBi6HWHJm7mOOch&t=35",
+      "description": "This test assesses your exposure to pain under spinal load.",
+      "region": 1
+    }
+  }
+]

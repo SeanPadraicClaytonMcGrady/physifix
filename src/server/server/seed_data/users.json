@@ -1,0 +1,22 @@
+[
+  {
+    "model": "server.user",
+    "pk": 1,
+    "fields": {
+      "username": "john",
+      "email": "john@john.com",
+      "password": "pbkdf2_sha256$600000$Jr4Oh4sSFMAeSgUVE2MpTf$KriUtxmfSOw1p/VaIgcfJe7jU0FVVyqf7G+vIlwg7Ds=",
+      "bookmarks": []
+    }
+  },
+  {
+    "model": "server.user",
+    "pk": 2,
+    "fields": {
+      "username": "jane",
+      "email": "jane@jane.com",
+      "password": "pbkdf2_sha256$600000$Jr4Oh4sSFMAeSgUVE2MpTf$KriUtxmfSOw1p/VaIgcfJe7jU0FVVyqf7G+vIlwg7Ds=",
+      "bookmarks": []
+    }
+  }
+]
