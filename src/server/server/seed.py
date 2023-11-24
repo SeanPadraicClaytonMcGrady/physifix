@@ -1,5 +1,12 @@
+import os
+import django
+
 from .models import Diagnostic, Region, User
 from django.contrib.auth.hashers import make_password
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "physifix.settings")
+django.setup()
+
 
 def seed_data():
     #Password for all test users.
@@ -32,5 +39,5 @@ def seed_data():
 
     jane.bookmarks.add(diagnostic_load_intolerance)
 
-
-seed_data()
+if __name__ == '__main__' : 
+    seed_data()

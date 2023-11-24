@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'physifix.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'physifix_db',
+        'USER': 'postgresql',
+        'PASSWORD': 'postgresql',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
