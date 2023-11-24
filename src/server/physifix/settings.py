@@ -35,9 +35,10 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.messages',
+    'django.contrib.sessions',
     'django.contrib.staticfiles',
     'graphene_django',
-    'server'
+    'server',
 ]
 
 GRAPHENE = {
@@ -119,6 +120,9 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_COOKIE_STORE = True
 
 
 # Static files (CSS, JavaScript, Images)
