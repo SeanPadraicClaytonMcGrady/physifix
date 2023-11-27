@@ -21,4 +21,5 @@ from django.contrib.auth.models import AbstractUser
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("server.urls")),
+    
 ]
