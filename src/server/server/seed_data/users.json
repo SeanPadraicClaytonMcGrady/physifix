@@ -3,7 +3,8 @@
     "model": "server.user",
     "pk": 1,
     "fields": {
-      "username": "john",
+      "first_name": "John",
+      "last_name": "Doe",
       "email": "john@john.com",
       "password": "pbkdf2_sha256$600000$Jr4Oh4sSFMAeSgUVE2MpTf$KriUtxmfSOw1p/VaIgcfJe7jU0FVVyqf7G+vIlwg7Ds=",
       "bookmarks": []
@@ -13,7 +14,8 @@
     "model": "server.user",
     "pk": 2,
     "fields": {
-      "username": "jane",
+      "first_name": "Jane",
+      "last_name": "Doe",
       "email": "jane@jane.com",
       "password": "pbkdf2_sha256$600000$Jr4Oh4sSFMAeSgUVE2MpTf$KriUtxmfSOw1p/VaIgcfJe7jU0FVVyqf7G+vIlwg7Ds=",
       "bookmarks": []
