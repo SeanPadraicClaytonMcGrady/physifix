@@ -5,5 +5,12 @@
     "fields": {
       "name": "Lower Back"
     }
+  },
+  {
+    "model": "server.region",
+    "pk": 2,
+    "fields": {
+      "name": "Hips"
+    }
   }
 ]
