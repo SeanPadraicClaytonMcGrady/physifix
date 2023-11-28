@@ -18,16 +18,6 @@ class Region(models.Model):
         app_label = 'server'
     
 
-# class User(models.Model):
-#     username = models.CharField(max_length=100)
-#     email = models.EmailField(unique=True)
-#     password = models.CharField(max_length=100)
-#     bookmarks = models.ManyToManyField(Diagnostic)
-    
-#     class Meta:
-#         app_label = 'server'
-
-
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=100, default="")
@@ -36,8 +26,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     
+    USERNAME_FIELD = 'email'
+    
     groups = models.ManyToManyField(Group, blank=True, related_name='user_custom_groups') 
     user_permissions = models.ManyToManyField(Permission, blank=True, related_name='user_custom_permissions')
+    
+    class Meta:
+        app_label = 'server'
     
     
     

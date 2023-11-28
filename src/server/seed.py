@@ -37,7 +37,8 @@ def seed_data():
         "model" : "server.user",
         "pk" : 1,
         "fields" : {
-            "username" : "john",
+            "first_name": "John",
+            "last_name": "Doe",
             "email" : "john@john.com",
             "password" : hashed_password,
             "bookmarks" : []
@@ -48,7 +49,8 @@ def seed_data():
         "model" : "server.user",
         "pk" : 2,
         "fields" : {
-            "username" : "jane",
+            "first_name": "Jane",
+            "last_name": "Doe",
             "email" : "jane@jane.com",
             "password" : hashed_password,
             "bookmarks" : []
