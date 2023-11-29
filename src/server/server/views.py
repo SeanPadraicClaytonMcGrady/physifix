@@ -18,17 +18,22 @@ def read_all_regions(request):
     
     return JsonResponse({'data': data})
 
+def read_all_users(request):
+    all_users = User.objects.all()
+    
+    data = [{'email': record.email, 'first_name': record.first_name, 'last_name': record.last_name} for record in all_users]
+    
+    return JsonResponse({'data': data})
+
 def sign_in(request):
     
     if request.method == 'POST':
         data = request.POST
-        
+                
         username = data.get('username')
         password = data.get('password')
         
         user = authenticate(username=username, password=password)
-        
-        print(user, "user heeeeeeeeeeeeeeeeeeeeeeeeeeeeere")
     
         if user is not None:
             login(request, user)

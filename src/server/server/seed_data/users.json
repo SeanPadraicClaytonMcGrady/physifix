@@ -6,7 +6,8 @@
       "first_name": "John",
       "last_name": "Doe",
       "email": "john@john.com",
-      "password": "pbkdf2_sha256$600000$0Ibn6yIgvWqwo9D7toP3ok$bZLo4wo+kzXFgqmEbooyNkrHr2jWcs5ew1ZTziKY6Ho=",
+      "username": "john_1",
+      "password": "pbkdf2_sha256$600000$4NHwjrAme30TbPi11L68OL$jjGpY7M47hzX8/YaDw3mo+DopIsNviSNOgdd0vyQhgY=",
       "bookmarks": []
     }
   },
@@ -17,7 +18,8 @@
       "first_name": "Jane",
       "last_name": "Doe",
       "email": "jane@jane.com",
-      "password": "pbkdf2_sha256$600000$0Ibn6yIgvWqwo9D7toP3ok$bZLo4wo+kzXFgqmEbooyNkrHr2jWcs5ew1ZTziKY6Ho=",
+      "username": "jane_2",
+      "password": "pbkdf2_sha256$600000$4NHwjrAme30TbPi11L68OL$jjGpY7M47hzX8/YaDw3mo+DopIsNviSNOgdd0vyQhgY=",
       "bookmarks": []
     }
   }

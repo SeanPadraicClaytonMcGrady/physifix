@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, Group, Permission
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, Group, Permission, AbstractUser
 
 
 class Diagnostic(models.Model):
@@ -17,22 +17,15 @@ class Region(models.Model):
     class Meta:
         app_label = 'server'
     
-
-class User(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(unique=True)
-    first_name = models.CharField(max_length=100, default="")
-    last_name = models.CharField(max_length=100, default="")
-    bookmarks = models.ManyToManyField(Diagnostic)
-    is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
     
-    USERNAME_FIELD = 'email'
+class User(AbstractUser):
+    bookmarks = models.ManyToManyField(Diagnostic)
     
     groups = models.ManyToManyField(Group, blank=True, related_name='user_custom_groups') 
     user_permissions = models.ManyToManyField(Permission, blank=True, related_name='user_custom_permissions')
     
+    email = models.EmailField(unique=True)
+    username = models.CharField(max_length=100, unique=True, default='user_{id}')
+    
     class Meta:
         app_label = 'server'
-    
-    
-    
