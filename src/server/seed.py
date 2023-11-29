@@ -40,6 +40,7 @@ def seed_data():
             "first_name": "John",
             "last_name": "Doe",
             "email" : "john@john.com",
+            "username" : "john_1",
             "password" : hashed_password,
             "bookmarks" : []
         }
@@ -52,6 +53,7 @@ def seed_data():
             "first_name": "Jane",
             "last_name": "Doe",
             "email" : "jane@jane.com",
+            "username" : "jane_2",
             "password" : hashed_password,
             "bookmarks" : []
         }
