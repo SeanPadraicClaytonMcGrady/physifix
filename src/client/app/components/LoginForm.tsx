@@ -40,6 +40,9 @@ export function LoginForm({ onLogin }: LoginProps) {
             className="bg-gray-500 rounded-lg text-white"
           />
         </label>
+        <button type="submit" className="bg-gray-600 rounded-lg text-white">
+          Submit
+        </button>
       </form>
     </div>
   );
