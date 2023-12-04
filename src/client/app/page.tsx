@@ -3,13 +3,18 @@ import Image from "next/image";
 import client from "@/lib/apollo";
 import { LoginForm } from "./components/LoginForm";
 import { useRouter } from "next/navigation";
+import { loginUser } from "@/lib/api";
 
 export default function LoginPage() {
   const router = useRouter();
 
-  function handleLogIn() {
+  function handleLogIn(username: string, password: string) {
     //Auth logic goes here
-    router.push("/dashboard");
+
+    const login = loginUser(username, password);
+
+    console.log(login, "login");
+    // router.push("/dashboard");
   }
 
   return (

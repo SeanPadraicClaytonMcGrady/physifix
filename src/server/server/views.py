@@ -3,6 +3,7 @@ from django.http import JsonResponse, HttpResponse
 from .models import Diagnostic, Region, User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import make_password
+import json
 
 def read_all_diagnostics(request):
     all_records = Diagnostic.objects.all()
@@ -25,20 +26,25 @@ def read_all_users(request):
     
     return JsonResponse({'data': data})
 
-def sign_in(request):
+def log_in(request):
     
     if request.method == 'POST':
-        data = request.POST
-                
-        username = data.get('username')
-        password = data.get('password')
-        
+        if request.content_type == 'application/json':
+            data = json.loads(request.body)
+            username = data.get('username')
+            password = data.get('password')
+        else: 
+            data = request.POST
+            username = data.get('username')
+            password = data.get('password')
+            
+            
         user = authenticate(username=username, password=password)
     
         if user is not None:
             login(request, user)
-            return HttpResponse("Sign-in successful")
+            return JsonResponse({"message" : "Sign-in successful"})
         else: 
-            return HttpResponse("Sign-in failed.")
+            return JsonResponse({"error:" "Sign-in failed."})
     
     
